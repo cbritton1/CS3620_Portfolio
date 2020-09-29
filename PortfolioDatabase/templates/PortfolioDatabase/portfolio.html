@@ -1,5 +1,18 @@
 {% extends 'PortfolioDatabase/base.html' %}
 
 {% block body %}
-
+  <h1 class="text-center">PORTFOLIO</h1>
+  {% for item in portfolio_list %}
+    <div class="row">
+      <div class="col-md-3 offset-md-1">
+        <img class="card" width="300px" src="{{ item.item_image }}"/>
+      </div>
+      <div class="col-md-2">
+        {{ item.item_name }}
+      </div>
+      <div class="col-md-1">
+        <a href="{% url 'portfolio_detail' item.id %}" class="btn btn-success">Details</a>
+      </div>
+    </div>
+  {% endfor %}
 {% endblock %}

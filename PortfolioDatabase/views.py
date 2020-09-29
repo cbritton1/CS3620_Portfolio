@@ -17,19 +17,28 @@ def hobbies(request):
     return render(request, "PortfolioDatabase/hobbies.html", context)
 
 
-def detail(request, item_id):
+def hobby_detail(request, item_id):
     item = Hobby.objects.get(pk=item_id)
     context = {
         'item': item,
     }
-
-    return render(request, "PortfolioDatabase/detail.html", context)
+    return render(request, "PortfolioDatabase/hobby_detail.html", context)
 
 
 def portfolio(request):
     portfolio_list = Portfolio.objects.all()
-    context = {}
+    context = {
+        'portfolio_list': portfolio_list,
+    }
     return render(request, "PortfolioDatabase/portfolio.html", context)
+
+
+def portfolio_detail(request, item_id):
+    item = Portfolio.objects.get(pk=item_id)
+    context = {
+        'item': item,
+    }
+    return render(request, "PortfolioDatabase/portfolio_detail.html", context)
 
 
 def contact(request):

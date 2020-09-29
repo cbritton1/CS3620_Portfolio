@@ -18,3 +18,5 @@ class Portfolio(models.Model):
         return item
     item_name = models.CharField(max_length=200)
     item_desc = models.CharField(max_length=200)
+    item_image = models.CharField(max_length=500, default="https://oceanwp.org/wp-content/uploads/2017/07/portfolio-image.png")
+

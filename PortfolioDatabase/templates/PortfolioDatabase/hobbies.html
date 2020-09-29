@@ -1,7 +1,7 @@
 {% extends 'PortfolioDatabase/base.html' %}
 
 {% block body %}
-  <h3 class="text-center">HOBBIES</h3>
+  <h1 class="text-center">HOBBIES</h1>
   {% for item in hobby_list %}
     <div class="row">
       <div class="col-md-3 offset-md-1">
@@ -11,7 +11,7 @@
         {{ item.item_name }}
       </div>
       <div class="col-md-1">
-        <a href="{% url 'detail' item.id %}" class="btn btn-success">Details</a>
+        <a href="{% url 'hobby_detail' item.id %}" class="btn btn-success">Details</a>
       </div>
     </div>
   {% endfor %}
