@@ -5,19 +5,35 @@ from .models import Hobby, Portfolio
 
 # Create your views here.
 def home(request):
-    return HttpResponse('<h1>Welcome</h1>'
-                        '<p>My name is Cory and I am trying to learn Django :)')
+    context = {}
+    return render(request, "PortfolioDatabase/home.html", context)
 
 
 def hobbies(request):
     hobby_list = Hobby.objects.all()
-    return HttpResponse(hobby_list)
+    context = {
+        'hobby_list': hobby_list,
+    }
+    return render(request, "PortfolioDatabase/hobbies.html", context)
+
+
+def detail(request, item_id):
+    item = Hobby.objects.get(pk=item_id)
+    context = {
+        'item': item,
+    }
+
+    return render(request, "PortfolioDatabase/detail.html", context)
 
 
 def portfolio(request):
     portfolio_list = Portfolio.objects.all()
-    return HttpResponse(portfolio_list)
+    context = {}
+    return render(request, "PortfolioDatabase/portfolio.html", context)
 
 
 def contact(request):
-    return HttpResponse('contact')
+    context= {}
+    return render(request, "PortfolioDatabase/contact.html", context)
+
+
