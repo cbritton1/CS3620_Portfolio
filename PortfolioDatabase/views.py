@@ -22,7 +22,7 @@ def hobby_detail(request, item_id):
     context = {
         'item': item,
     }
-    return render(request, "PortfolioDatabase/hobby_detail.html", context)
+    return render(request, "PortfolioDatabase/detail.html", context)
 
 
 def portfolio(request):
@@ -38,7 +38,7 @@ def portfolio_detail(request, item_id):
     context = {
         'item': item,
     }
-    return render(request, "PortfolioDatabase/portfolio_detail.html", context)
+    return render(request, "PortfolioDatabase/detail.html", context)
 
 
 def contact(request):
