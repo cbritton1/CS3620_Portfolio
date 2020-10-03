@@ -1,18 +1,22 @@
 {% extends 'PortfolioDatabase/base.html' %}
 
 {% block body %}
-  <h1 class="text-center">HOBBIES</h1>
+  <h1 class="text-center underline-text extra-padding_top extra_padding_bottom green_background">HOBBIES</h1>
   {% for item in hobby_list %}
-    <div class="row">
-      <div class="col-md-3 offset-md-1">
-        <img class="card" width="300px" src="{{ item.item_image }}"/>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-4 offset-md-3">
+            <img class="card image_width" src="{{ item.item_image }}"/>
+          </div>
+          <div class="col-md-2">
+            {{ item.item_name }}
+          </div>
+          <div class="col-md-1">
+            <a href="{% url 'hobby_detail' item.id %}" class="btn btn-success">Details</a>
+          </div>
       </div>
-      <div class="col-md-1">
-        {{ item.item_name }}
-      </div>
-      <div class="col-md-1">
-        <a href="{% url 'hobby_detail' item.id %}" class="btn btn-success">Details</a>
-      </div>
+      <hr class="green_background"/>
     </div>
+
   {% endfor %}
 {% endblock %}

@@ -1,0 +1,60 @@
+.underline-text {
+    text-decoration: underline;
+}
+
+img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.extra-padding_top {
+    padding-top: 10px;
+}
+
+.extra_padding_bottom {
+    padding-bottom: 20px;
+}
+
+body{
+    background-color: lightgray !important;
+}
+
+h1, h2{
+    font-family: "Arial";
+}
+
+.blue-text {
+    color: darkblue;
+}
+
+.black_background {
+    background-color: black;
+}
+
+.white_text {
+    color: white;
+}
+
+.blue_background {
+    background-color: blue;
+}
+
+.text_orange {
+    color: darkorange;
+}
+
+.image_width {
+    width: 300px;
+}
+
+.green_background {
+    background-color: green;
+}
+
+.orange_background {
+    background-color: darkorange;
+}
+
+.overline {
+    text-decoration: overline;
+}
