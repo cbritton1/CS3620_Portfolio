@@ -58,3 +58,12 @@ h1, h2{
 .overline {
     text-decoration: overline;
 }
+
+.button_margin {
+    margin-top: 25px;
+    margin-left: 5px;
+}
+
+.full_button_margin {
+    margin: 5px;
+}
